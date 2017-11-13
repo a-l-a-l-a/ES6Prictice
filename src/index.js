@@ -295,7 +295,7 @@ console.log(setArr)
 setArr.delete('前端职场');//删除delete
 console.log(setArr);
 console.log(setArr.has('前端职场'));//判断Set中是否存在‘前端职场’;
-for(item of setArr){
+for (let item of setArr) {
     console.log(item);
 }
 console.log(setArr.size);//size属性查看set的数量
