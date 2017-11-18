@@ -211,8 +211,14 @@ console.log(0 in arr1); */
 /* let arr=['jspang','技术胖','前端教程']; 
 arr.forEach((val,index)=>console.log(index,val)); */
 
-/* let arr=['jspang','技术胖','前端教程'];
-arr.filter(x=>console.log(x)); */
+/* let arr=['jspang','技术胖','前端教程',4,5,5];
+var a = arr.filter(x=>{
+    console.log(x);
+    if(isNumber(x)){
+        return x;
+    }
+});
+console.log(a) */
 
 /* let arr=['jspang','技术胖','前端教程'];
 arr.some(x=>console.log(x)); */
@@ -225,7 +231,9 @@ some() 方法会依次执行数组的每个元素：
 
 /* let arr=['jspang','技术胖','前端教程'];
 console.log(arr.map(x=>'web'));
-// map在这里起到一个替换的作用 */
+// map在这里起到一个替换的作用(map不会改变原始的数组，而且不会对空的数组进行检测)
+console.log(arr); */
+// [1, 2 ,3, 4].forEach(console.log);
 
 //数组转换字符串的方法
 /* let arr = [1,2,3];
@@ -445,4 +453,5 @@ all.name('all'); */
  * 模块化操作
  */
 import {sex} from "./temp.js" 
+import { isNumber } from "util";
 console.log(sex+2)   // boy
